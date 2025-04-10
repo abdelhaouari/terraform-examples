@@ -14,10 +14,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Cloner le dépôt
+      - name: Cloner un commit précis
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          ref: c191f7bcb0fa786b68c7b3904b6f3bbb90881fc6
+          fetch-depth: 2
 
       - name: 🚀 Lancer TFDefectGA
         uses: TFDefect/TFDefectGA@v1.0.3
